@@ -128,13 +128,13 @@ class MainActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this@MainActivity)
             builder.setTitle("Carbon")
             builder.setMessage("Görseli nereden seçmek istesiniz ?")
-            builder.setPositiveButton("Galeri") { dialog, which ->
+            builder.setPositiveButton("Gallery") { dialog, which ->
                 dialog.dismiss()
                 val intent = Intent(Intent.ACTION_PICK)
                 intent.type = "image/*"
                 startActivityForResult(intent, 1111)
             }
-            builder.setNegativeButton("Kamera") { dialog, which ->
+            builder.setNegativeButton("Camera") { dialog, which ->
                 dialog.dismiss()
                 val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
                 if (cameraIntent.resolveActivity(packageManager) != null) {
